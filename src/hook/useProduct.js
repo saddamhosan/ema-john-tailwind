@@ -7,6 +7,7 @@ const useProduct = () => {
       .then((res) => res.json())
       .then((data) => {
           setProduct(data);
+          console.log(data);
       });
   }, []);
   return [products, setProduct];

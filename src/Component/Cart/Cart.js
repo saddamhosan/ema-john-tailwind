@@ -1,16 +1,18 @@
 import React from 'react';
 
 
-const Cart = ({ cart, clearCart, children }) => {
+const Cart = ({ children , cart, clearCart}) => {
   let price = 0;
   let quantity = 0;
   let shipping = 0;
-
-  cart.map((item) => {
-    quantity += item.quantity;
-    price += item.price * item.quantity;
-    shipping += item.shipping;
-  });
+console.log(cart);
+  
+    cart.map((item) => {
+      quantity += item.quantity;
+      price += item.price * item.quantity;
+      shipping += item.shipping;
+    });
+  
 
   const tax = parseFloat((price * 0.1).toFixed(2));
   const total = price + shipping + tax;

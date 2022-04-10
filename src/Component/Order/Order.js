@@ -8,7 +8,9 @@ import { clearStorage, removeStorage } from '../Storage/Storage';
 
 const Order = () => {
     const [products] = useProduct();
+    console.log(products);
     const [cart, setCart] = useCart(products);
+    console.log(cart);
     const deleteToCart=(item)=>{
         const rest=cart.filter(singleItem=>singleItem.id!==item.id)
         if(rest){
@@ -33,10 +35,10 @@ const Order = () => {
         <div className="bg-zinc-200 w-1/4 ml-4">
           <Cart cart={cart} clearCart={clearCart}>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/shipment")}
               className="bg-green-200 w-2/5 ml-2 rounded-xl hover:bg-green-500 mt-4 mb-20"
             >
-              Back to shop
+              Shipment
             </button>
           </Cart>
         </div>
