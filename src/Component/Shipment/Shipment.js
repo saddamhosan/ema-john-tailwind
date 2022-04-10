@@ -26,7 +26,7 @@ const Shipment = () => {
     return (
       <div className=" mt-20 w-[500px] mx-auto border-2 rounded-[8px] flex justify-center py-10 mb-10">
         <div>
-          <h1 className="text-[35px] text-[#2A414F]">Register</h1>
+          <h1 className="text-[35px] text-[#2A414F]">Your shipment info</h1>
           <form onSubmit={handleSubmit}>
             <div className="mt-[20px]">
               <label className="block" htmlFor="name">
