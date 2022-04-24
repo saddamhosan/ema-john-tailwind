@@ -1,15 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import useCart from '../../hook/useCart';
-import useProduct from '../../hook/useProduct';
 import Cart from '../Cart/Cart';
 import OrderDetail from '../OrderDetail/OrderDetail';
 import { clearStorage, removeStorage } from '../Storage/Storage';
 
 const Order = () => {
-    const [products] = useProduct();
-    console.log(products);
-    const [cart, setCart] = useCart(products);
+    const [cart, setCart] = useCart();
     console.log(cart);
     const deleteToCart=(item)=>{
         const rest=cart.filter(singleItem=>singleItem._id!==item._id)
