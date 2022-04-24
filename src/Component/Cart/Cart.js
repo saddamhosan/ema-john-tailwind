@@ -5,7 +5,6 @@ const Cart = ({ children , cart, clearCart}) => {
   let price = 0;
   let quantity = 0;
   let shipping = 0;
-console.log(cart);
   
     cart.map((item) => {
       quantity += item.quantity;

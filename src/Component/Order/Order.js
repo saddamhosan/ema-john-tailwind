@@ -12,11 +12,11 @@ const Order = () => {
     const [cart, setCart] = useCart(products);
     console.log(cart);
     const deleteToCart=(item)=>{
-        const rest=cart.filter(singleItem=>singleItem.id!==item.id)
+        const rest=cart.filter(singleItem=>singleItem._id!==item._id)
         if(rest){
             setCart([...rest])
         }
-        removeStorage(item.id)
+        removeStorage(item._id)
     }
 
 
